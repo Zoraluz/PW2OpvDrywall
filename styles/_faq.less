@@ -1,0 +1,66 @@
+// ============================================================
+// PREGUNTAS FRECUENTES
+// ============================================================
+.faq-contenedor {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.faq-wrapper { display: flex; flex-direction: column; }
+
+.faq-item {
+    background: @blanco;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+    margin: 0;
+
+    &:first-child { border-top-left-radius: 10px; border-top-right-radius: 10px; }
+    &:last-child  { border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+}
+
+.faq-toggle {
+    display: none;
+
+    &:checked ~ .faq-answer {
+        max-height: 300px;
+        padding: 15px;
+        border-bottom: 1px solid #dcdcdc;
+    }
+
+    &:checked + .faq-question::after { transform: rotate(180deg); }
+}
+
+.faq-question {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    background: @blanco;
+    transition: background 0.3s;
+
+    &:hover { background: #f1f7ff; }
+
+    &::after {
+        content: "▼";
+        font-size: 14px;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+        transition: transform 0.3s;
+    }
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fafafa;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 15px;
+    margin-top: -1px;
+}

@@ -1,0 +1,76 @@
+
+main.llamanos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    background: @blanco;
+
+    > a {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        > div {
+            background: @blanco;
+            border-radius: @radio-card;
+            padding: 25px;
+            box-shadow: 0 8px 25px @sombra-card;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: @transicion;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 35px @sombra-hover;
+            }
+        }
+
+        // Alternar dirección en items pares
+        &:nth-child(even) > div {
+            flex-direction: row-reverse;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            flex-shrink: 0;
+            opacity: 0.9;
+            transition: opacity @transicion;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            color: @texto-claro;
+            line-height: 1.6;
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        span {
+            display: inline-block;
+            background: @acento;
+            color: @blanco;
+            padding: 10px 24px;
+            border-radius: @radio-btn;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: @transicion;
+            flex-shrink: 0;
+
+            &:hover {
+                background: @texto;
+            }
+        }
+    }
+}

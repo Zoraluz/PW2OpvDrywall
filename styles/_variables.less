@@ -1,0 +1,60 @@
+@principal:     #9fa7b1;
+@texto:         #222222;
+@texto-claro:   #555555;
+@acento:        #000000;
+@blanco:        #ffffff;
+@negro:         #000000;
+@gris-footer:   #ccc;
+@sombra-card:   rgba(0, 0, 0, 0.09);
+@sombra-hover:  rgba(0, 0, 0, 0.15);
+@sombra-social: rgba(0, 0, 0, 0.4);
+@radio-card:    18px;
+@radio-btn:     50px;
+@transicion:    all 0.3s;
+
+
+// ============================================================
+// MIXINS
+// ============================================================
+.flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-base(@radio: @radio-card) {
+    background: @blanco;
+    border-radius: @radio;
+    overflow: hidden;
+    box-shadow: 0 12px 35px @sombra-card;
+    transition: @transicion;
+    &:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px @sombra-hover;
+    }
+}
+
+.hero-bg(@url, @height: 350px) {
+    width: 100%;
+    height: @height;
+    background-image: url(@url);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.circle(@size) {
+    width: @size;
+    height: @size;
+    border-radius: 50%;
+}

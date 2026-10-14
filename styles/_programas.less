@@ -1,0 +1,130 @@
+body.body-np {
+    font-family: 'Roboto', sans-serif;
+    color: @texto;
+    line-height: 1.7;
+    background: @principal;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+main .caja-np {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background: url('../assets/imagen1.jpg') top/cover no-repeat;
+    display: block;
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        margin: 0;
+        font-size: 2.25rem;
+        color: @negro;
+        z-index: 1;
+    }
+}
+
+.t-contenedor {
+    padding: 5rem 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.carta-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.carta {
+    width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.47);
+    overflow: hidden;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .card-top img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .card-middle {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px #ccc solid;
+        margin-bottom: 0.5rem;
+        flex-grow: 1;
+
+        strong {
+            display: block;
+            padding: 0.75rem 0.5rem;
+            margin-bottom: 0.5rem;
+            color: @negro;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .c-descripcion {
+            padding: 0 0.5rem;
+            line-height: 1.5;
+            color: @negro;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    .card-bottom {
+        padding: 0.5rem;
+        text-align: right;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        column-gap: 1.25rem;
+        row-gap: 0.25rem;
+        justify-content: center;
+        align-items: stretch;
+
+        [class*='col-'] {
+            flex-shrink: 0;
+            flex-grow: 0;
+            min-width: 0;
+        }
+
+        .col-12 {
+            flex-basis: 100%;
+        }
+
+        @media (min-width: 720px) {
+            .col-m-6 {
+                flex-basis: calc(100% / 12 * 6);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .col-l-4 {
+                flex-basis: calc(100% / 12 * 4);
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+// ============================================================
+// RESPONSIVE - TODOS LOS MEDIA QUERIES
+// ============================================================
+
+@media (max-width: 992px) {
+    header nav ul { gap: 20px; font-size: 0.95rem; }
+
+    .fila {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        img { width: 80%; max-width: 400px; }
+    }
+
+    .texto { text-align: justify; width: 90%; }
+
+    .hero_acerca, .hero2_acerca {
+        height: 300px;
+        justify-content: center;
+        text-align: center;
+        h2 { font-size: 1.4rem; }
+    }
+
+    .btn { font-size: 0.95rem; padding: 10px 20px; }
+
+    .grids .rows .cols { flex-basis: calc(100% / 12 * 6); }
+
+    .cuerpo_terminos_codiciones {
+        padding: 1.5rem;
+        h1 { font-size: 1.4rem; text-align: center; }
+        p  { font-size: 0.98rem; }
+    }
+
+    main.porque {
+        padding: 40px 20px;
+        div    { padding: 20px; margin-bottom: 35px; }
+        h2.por { font-size: 1.4rem; }
+        p1.res { font-size: 1rem; }
+    }
+
+    .contenedor { width: 95%; }
+    .tarjeta    { padding: 12px; img { .circle(80px); } }
+}
+
+@media (max-width: 768px) {
+    main { margin-top: 115px; }
+
+    header .navbar { flex-direction: column; padding: 15px 20px; }
+    header .logo   { margin-bottom: 15px; }
+    header nav ul  { justify-content: center; gap: 25px; }
+
+    .hero .hero-content h1 { font-size: 2.8rem; }
+
+    main a > div { flex-direction: column !important; padding: 20px; text-align: center; }
+    main a img   { width: 100px; height: 100px; }
+    main a p     { font-size: 1rem; }
+
+    .faq-contenedor { width: 92%; }
+    .faq-question   { font-size: 17px; }
+
+    .contenedor { grid-template-columns: 1fr; }
+    .tarjeta    { flex-direction: row; }
+}
+
+@media (max-width: 600px) {
+    .hero_acerca, .hero2_acerca {
+        height: 250px;
+        padding: 10px;
+        h2 { font-size: 1.2rem; }
+    }
+
+    .fila img { width: 100%; }
+    .texto    { width: 100%; }
+    .btn      { font-size: 0.9rem; padding: 8px 18px; }
+
+    .cuerpo_terminos_codiciones {
+        padding: 1rem;
+        h1 { font-size: 1.2rem; }
+        p  { font-size: 0.95rem; }
+    }
+
+    footer .footer-links a { display: block; margin: 0.5rem 0; }
+}
+
+@media (max-width: 480px) {
+    .faq-contenedor { width: 95%; padding: 10px; }
+    .faq-question   { font-size: 16px; padding: 12px; &::after { right: 12px; top: 16px; } }
+    .faq-answer     { font-size: 15px; padding: 0 12px; }
+
+    main a > div { padding: 15px; }
+    main a img   { width: 80px; height: 80px; }
+    main a p     { font-size: 0.9rem; }
+    main a span  { padding: 10px 20px; font-size: 0.9rem; }
+
+    main.porque {
+        padding: 30px 15px;
+        div    { padding: 15px; margin-bottom: 25px; }
+        h2.por { font-size: 1.2rem; }
+        p1.res { font-size: 0.95rem; }
+    }
+
+    .tarjeta {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        img { .circle(70px); margin-bottom: 10px; }
+        .info {
+            h3 { font-size: 16px; }
+            p  { font-size: 14px; }
+        }
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    .grids .rows .cols { flex-basis: calc(100% / 12 * 6); }
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+    .grids .rows .cols { flex-basis: calc(100% / 12 * 4); }
+}
+
+@media (min-width: 1300px) {
+    .grids .rows .cols { flex-basis: calc(100% / 12 * 3); }
+}
+
+@media (min-width: 1200px) {
+    .faq-contenedor { max-width: 850px; }
+}
+
+@media (min-width: 1400px) {
+    .contenedor { max-width: 1100px; }
+    .tarjeta    { padding: 20px; img { .circle(100px); } }
+}

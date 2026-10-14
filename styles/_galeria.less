@@ -1,0 +1,44 @@
+// ============================================================
+// GALERÍA
+// ============================================================
+.gallery { padding: 5rem; }
+
+.contener {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.pic {
+    width: 300px;
+    max-width: 300px;
+    margin: 20px;
+    border: 1px solid #eee;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.47);
+    overflow: hidden;
+    border-radius: 7px;
+
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.grids {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    .rows {
+        display: flex;
+        flex-wrap: wrap;
+
+        [class*='cols'] { flex-shrink: 0; flex-grow: 0; min-width: 0; }
+        .cols { flex-basis: 100%; }
+    }
+}

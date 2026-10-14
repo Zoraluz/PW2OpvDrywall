@@ -1,0 +1,59 @@
+// ============================================================
+// FOOTER
+// ============================================================
+footer {
+    background: @negro;
+    color: @gris-footer;
+    padding: 90px 20px 50px;
+    text-align: center;
+
+    .footer-links a {
+        color: @gris-footer;
+        margin: 0 20px;
+        font-size: 1rem;
+        transition: color 0.3s;
+        &:hover { color: @blanco; }
+    }
+
+    .footer-text { margin-top: 30px; font-size: 0.95rem; opacity: 0.9; }
+}
+
+// ============================================================
+// SOCIAL
+// ============================================================
+.social {
+    margin: 50px 0;
+
+    a {
+        font-size: 2rem;
+        margin: 0 25px;
+        .circle(60px);
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: @blanco;
+        transition: @transicion;
+
+        &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px @sombra-social;
+        }
+
+        &:nth-child(1):hover { background: #1877f2; }
+        &:nth-child(2):hover { background: linear-gradient(45deg, #ff0050, #000); }
+        &:nth-child(3):hover { background: #d63031; }
+
+        i { display: none; }
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+            pointer-events: none;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover .icon { transform: scale(1.15); }
+    }
+}
